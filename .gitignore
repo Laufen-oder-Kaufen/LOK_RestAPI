@@ -1,6 +1,7 @@
 ## Own Entrys
 ## Dean Reinhardt
 docker-compose.override.yml
+/bootstrap/cache/
 
 ## GITIGNIORE
 ## COMPOSER
