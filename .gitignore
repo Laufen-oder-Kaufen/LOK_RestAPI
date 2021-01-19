@@ -1,3 +1,7 @@
+## Own Entrys
+## Dean Reinhardt
+docker-compose.override.yml
+
 ## GITIGNIORE
 ## COMPOSER
 ## SOURCE: https://github.com/github/gitignore/blob/master/Composer.gitignore
@@ -134,7 +138,6 @@ fabric.properties
 ## LARAVEL
 ## SOURCE: https://github.com/github/gitignore/blob/master/Laravel.gitignore
 
-/vendor/
 node_modules/
 npm-debug.log
 yarn-error.log
