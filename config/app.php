@@ -174,6 +174,7 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        App\Providers\AnnotationsServiceProvider::class, // WARNING ! UNSTABLE ! SELF ADDED LARAVEL 8 SUPPORT (FROM DEAN R. https://github.com/deanomus/annotations )
 
     ],
 
