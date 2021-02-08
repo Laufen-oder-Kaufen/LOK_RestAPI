@@ -1,5 +1,6 @@
 <?php namespace App\Providers;
 
+use App\Http\Controllers\api\v1_0\ApiAuthController;
 use App\Http\Controllers\TestController;
 use Collective\Annotations\AnnotationsServiceProvider as ServiceProvider;
 use Illuminate\Support\Facades\Http;
@@ -21,6 +22,7 @@ class AnnotationsServiceProvider extends ServiceProvider {
      */
     protected $scanRoutes = [
         TestController::class,
+        ApiAuthController::class,
     ];
 
     /**
