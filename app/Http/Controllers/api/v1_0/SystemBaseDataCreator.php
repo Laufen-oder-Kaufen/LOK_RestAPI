@@ -5,7 +5,10 @@ namespace app\Http\Controllers\api\v1_0;
 trait SystemBaseDataCreator
 {
 
-    protected function randomString($length = 8, $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ')
+    protected function randomString(
+        $length = 8,
+        $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    )
     {
         $charactersLength = strlen($characters);
         $randomString = '';
@@ -16,7 +19,8 @@ trait SystemBaseDataCreator
     }
 
 
-    protected function giveUserNewToken($user, $token = null) {
+    protected function giveUserNewToken($user, $token = null)
+    {
         if ($token == null || $token == '') {
             $token = $this->randomString(16);
         }
@@ -29,5 +33,4 @@ trait SystemBaseDataCreator
             'instance' => $user,
         ];
     }
-
 }

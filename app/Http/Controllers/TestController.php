@@ -9,8 +9,8 @@ class TestController extends Controller
     /**
      * @Get("/hallo", as="hallo.ha")
      */
-    public function hallo() {
+    public function hallo()
+    {
         return 'In Bremen sagt man Moin!';
     }
-
 }

@@ -54,5 +54,4 @@ class AnnotationsServiceProvider extends ServiceProvider {
      * @var bool
      */
     protected $scanEverything = false;
-
 }

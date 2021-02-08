@@ -71,5 +71,4 @@ class ApiAuthController extends Controller
         return $user;
 
     }
-
 }
