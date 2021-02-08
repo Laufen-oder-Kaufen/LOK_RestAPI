@@ -38,12 +38,10 @@ class ApiAuthController extends Controller
 
         $user = $this->getUser($name, $password);
 
-        return response()->json($user);
-
         $tokencreator = $this->giveUserNewToken($user);
         $token = $tokencreator['token'];
 
-        return $token;
+        return ['token' => $token];
     }
 
     /**
@@ -64,7 +62,14 @@ class ApiAuthController extends Controller
      */
     private function getUser($name, $password)
     {
-        return User::query()->where('name', $name)->where('password', Hash::make($password))->count();
+        $user = User::query()->where('name', $name)->first();
+
+        if (!Hash::check($password, $user->password)) {
+            return null;
+        }
+
+        return $user;
+
     }
 
 }
