@@ -15,8 +15,7 @@ services:
         volumes:
             - '.:/var/www/html'
         networks:
-          - traefik_dev_proxy
-          - dev_mysql
+          - dev_proxy
           - sail
           # - selenium
         labels:
@@ -67,12 +66,9 @@ services:
             - sail
 
 networks:
-  traefik_dev_proxy:
+  dev_proxy:
     external:
-      name: traefik_dev_proxy
-  dev_mysql:
-    external:
-      name: dev_mysql
+      name: dev_proxy
   sail:
 volumes:
     sailredis:
